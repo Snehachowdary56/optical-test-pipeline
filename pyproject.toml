@@ -1,0 +1,9 @@
+[project]
+name = "optical-test-pipeline"
+version = "0.1.0"
+description = "Data pipeline for optical component test measurements: clean, transform, store, analyze, report."
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
