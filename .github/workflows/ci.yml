@@ -26,8 +26,19 @@ jobs:
       - name: Run the pipeline on sample data
         run: python -m otp --generate
 
-      - name: Upload the report
+      - name: Evaluate the chatbot (fails below 95% accuracy)
+        run: |
+          python -m otp.chat.evaluate --min-accuracy 0.95
+          cat eval/results.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Try the chatbot in the terminal
+        run: printf 'What is the yield?\nCompare stations\nwhat about station B?\nWhich devices failed?\nWhat is the capital of France?\nquit\n' | python -m otp.chat
+
+      - name: Upload the report and evaluation
         uses: actions/upload-artifact@v4
         with:
           name: validation-report
-          path: output/report.html
+          path: |
+            output/report.html
+            eval/results.md
+            eval/results.json
