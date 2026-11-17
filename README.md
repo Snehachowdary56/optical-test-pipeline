@@ -75,6 +75,8 @@ You: What is the capital of France?
 Bot: Sorry, I can only answer questions about the optical component test data. ...
 ```
 
+![Web chat (Streamlit): answers come from SQL tools; the grey line shows the tool and mode used](docs/chatbot-web.png)
+
 ### How it works (AI application design)
 
 ```
