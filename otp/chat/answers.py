@@ -8,7 +8,8 @@ HELP = ("I answer questions about the optical component test data, for example: 
         "\"What is the yield?\", \"Compare stations\", \"Average insertion loss at 75C\", "
         "\"Which devices failed?\", \"Tell me about DEV-0042\", \"How does temperature affect loss?\", "
         "\"What did cleaning remove?\" or \"What are the spec limits?\"")
-OUT_OF_SCOPE = "Sorry, I can only answer questions about the optical component test data. " + HELP
+OUT_OF_SCOPE = ("Sorry, I can only answer questions about the optical component test data. Try asking: "
+                "\"What is the yield?\", \"Which devices failed?\" or \"How does temperature affect loss?\"")
 UNCLEAR = ("I'm not sure what you're asking about the test data. Try asking about yield, stations, "
            "insertion loss, output power, temperature, a device ID or data cleaning.")
 
